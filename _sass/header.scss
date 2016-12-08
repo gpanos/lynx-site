@@ -1,3 +1,26 @@
+.navbar-transparent {
+}
+
+.navbar-header {
+    a {
+        color: white;
+        opacity: 1;
+        font-weight: 500;
+        margin: 5px 0px;
+        padding: 10px 15px;
+        font-size: 30px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+    button {
+        font-size: 40px;
+        color: white;
+    }
+    button :hover {
+        cursor: pointer;
+    }
+}
+
 .navbar-side {
     height: 100%;
     width: 25%;
@@ -40,13 +63,40 @@
     width: 40px;
 }
 
-.jumbotron{
+.header-text {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: -2px 2px 30px rgba(0, 0, 0, 0.25), -2px 4px 14px rgba(0, 0, 0, 0.1);
+    
+    h1 {
+        font-size: 100px;
+        font-weight: 200;
+        letter-spacing: 0.07em;
+        line-height: 1.7;
+        color: white;
+        text-transform: uppercase;
+        clear:both;
+        
+    }
+    
+    span {
+        display: inline-block;
+        padding: 0.2em 0.5em;
+        border: white solid 10px;
+    }
+}
+
+.jumbotron{
     margin-bottom: 0px;
     height: 100vh;
     color: white;
-    text-shadow: black 0.1em 0.1em 0.1em;
     background:transparent;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
 }
 
 
