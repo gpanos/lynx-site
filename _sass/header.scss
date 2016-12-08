@@ -40,6 +40,21 @@
     width: 40px;
 }
 
+.jumbotron{
+    text-align: center;
+    margin-bottom: 0px;
+    height: 100vh;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    background:transparent;
+}
+
+
+.image-container {
+    background: url('/assets/img/header.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .reveal {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
