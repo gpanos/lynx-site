@@ -1,6 +1,7 @@
 
 var transparent = true;
 var window_height = $(window).height();
+var navbar_height = $('nav').outerHeight() + 50;
 
 $( document ).ready(function() {
     
@@ -17,6 +18,11 @@ $( document ).ready(function() {
             }
         }
     });
+    
+    $( 'a[href^="#"]' ).on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $(this.hash).offset().top - navbar_height}, 900);
+    } );
     
     $("#siteName").fitText(1, { minFontSize: '35px', maxFontSize: '100px' });
     
@@ -80,17 +86,15 @@ $( document ).ready(function() {
         }
     
         var waypoints = $(this).waypoint(function(direction) {
-            if(direction == 'down'){
-                $(this.element).addClass('animate');    
+            if (direction == 'down'){
+                $(this.element).addClass('animated fadeInUp');    
             } else {
-                $(this.element).removeClass('animate');
+                $(this.element).removeClass('animated fadeInUp');
             }
          }, {
            offset: window_height - offset_diff
     });
  });
-    
-    
     
     
 });
