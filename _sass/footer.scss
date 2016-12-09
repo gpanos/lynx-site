@@ -1,0 +1,36 @@
+.footer {
+    overflow: hidden;
+}
+
+.footer-dark {
+    background-color: rgba(30, 30, 30, 0.97);
+    color: #DDDDDD;
+}
+
+.footer-container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.social-media {
+    text-align: center;
+    margin-left: -40px;  
+    font-size: 30px;
+    padding: 24px 15px; 
+}
+
+.social-media > a {
+    display: inline-block;
+    width: 40px;
+    color: #9A9A9A;
+
+}
+
+.contact-info > a {
+    color: #9A9A9A;
+    display: block;
+}
+
+.contact-info > a:hover {
+    text-decoration: none;
+}
