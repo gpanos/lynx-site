@@ -6,7 +6,7 @@
             color: white !important;
         }
         
-        button {
+        .navbar-toggler {
             color: white !important;
         }        
     }
@@ -23,7 +23,7 @@
             color: #343434;        
         }
         
-        button {
+        .navbar-toggler {
             color: #343434;        
         }        
     }
@@ -31,22 +31,22 @@
     transition: all 0.8s ease;
 }
 
-
+.navbar-toggler {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 11px;
+    
+}
+.navbar-toggler:hover{
+    cursor: pointer;
+}
 .navbar-header {
     a {
         opacity: 1;
-        font-weight: 500;
-        margin: 5px 0px;
-        padding: 10px 15px;
+        font-weight: 300;
         font-size: 30px;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-    }
-    button {
-        font-size: 40px;
-    }
-    button :hover {
-        cursor: pointer;
     }
 }
 

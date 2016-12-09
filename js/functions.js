@@ -4,19 +4,9 @@ var window_height = $(window).height();
 var navbar_height = $('nav').outerHeight() + 50;
 
 $( document ).ready(function() {
-    
+    fixNavbar();
     $(window).scroll(function(){
-        if ( $(window).scrollTop() > window_height - 200 ) {
-            if (transparent) {
-                transparent = false;
-                $('nav[role="navigation"]').removeClass('navbar-transparent');
-            }
-        } else {
-            if( !transparent ) {
-                transparent = true;
-                $('nav[role="navigation"]').addClass('navbar-transparent');
-            }
-        }
+        fixNavbar();
     });
     
     $( 'a[href^="#"]' ).on('click', function(e) {
@@ -98,6 +88,20 @@ $( document ).ready(function() {
     
     
 });
+
+function fixNavbar() {
+    if ( $(window).scrollTop() > window_height - 200 ) {
+        if (transparent) {
+            transparent = false;
+            $('nav[role="navigation"]').removeClass('navbar-transparent');
+        }
+    } else {
+        if( !transparent ) {
+            transparent = true;
+            $('nav[role="navigation"]').addClass('navbar-transparent');
+        }
+    }
+}
 
 (function( $ ){
 
