@@ -1,45 +1,34 @@
 <section class="about-us" id="aboutUs">
     
-    <div class="row">
-        <div class="container text-container">
-            <h1 class="display-4">About us</h1>
-            <p class="lead">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Aenean commodo ligula eget dolor. Aenean massa. 
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Aenean commodo ligula eget dolor. Aenean massa. 
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-            </p>            
+    <div class="container">
+        <div class="row">
+            <div class="container text-container">
+                <h1 class="display-4">About us</h1>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    Aenean commodo ligula eget dolor. Aenean massa. 
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    Aenean commodo ligula eget dolor. Aenean massa. 
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                </p>            
+            </div>
+        </div>
+        <div class="row">
+            <div class="images-container">
+                <div class="col-md-12">
+                    {% for aboutPhoto in site.data.settings.aboutPhotos %}
+                        <div class="col-md-4">
+                            <div class="card add-animation"
+                                 data-order="{{aboutPhoto.order}}"
+                            >
+                                <img src="/assets/img/{{aboutPhoto.name}}" alt="Card Image">
+                            </div>                
+                        </div>
+                    {% endfor %}
+                </div>        
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="images-container">
-            <div class="col-md-12">
-                <div class="col-md-4">
-                    <div class="card add-animation"
-                         data-order='first'
-                    >
-                        <img src="/assets/img/group1.jpg" alt="Card Image">
-                    </div>                
-                </div>
-                <div class="col-md-4"
-                     data-order='second'
-                >
-                    <div class="card add-animation">
-                        <img src="/assets/img/group2.jpg" alt="Card Image">
-                    </div>                                    
-                </div>
-                <div class="col-md-4">
-                    <div class="card add-animation"
-                         data-order='third'
-                    >
-                        <img src="/assets/img/group3.jpg" alt="Card Image">
-                    </div>                
-                </div>
-            </div>        
-        </div>
-    </div>
-    
     
 </section>

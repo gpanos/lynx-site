@@ -1,0 +1,48 @@
+.clients {
+    
+    h1 {
+        margin: 100px 0 40px 0;
+        text-transform: uppercase;
+    }
+    
+    .text-container {
+        text-align: center;
+        opacity: 0;
+    }    
+    
+    .testimonials {
+        position: relative;
+        min-height: 200px;
+        min-width: 200px;
+        max-width: 80%;
+        margin: auto;
+    }
+    
+    .open-quotes {
+        font-size: 20px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .close-quotes {
+        font-size: 20px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .lead {
+        text-align: center;
+        padding: 50px;    
+    }
+    
+    .client-names {
+        display: inline-block;   
+    }
+    
+    .nav-text {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
