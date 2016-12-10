@@ -5,6 +5,7 @@ var navbar_height = $('nav').outerHeight() + 50;
 
 $( document ).ready(function() {
     fixNavbar();
+    fixClients();
     $(window).scroll(function(){
         fixNavbar();
     });
@@ -96,10 +97,35 @@ $( document ).ready(function() {
             
          }, {
            offset: window_height - offset_diff
+       });
     });
- });
     
-    
+    $('.client-name').on('click', function(){
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        var animationName = 'animated zoomIn';
+        $('[class*="client-name"]').each(function(){
+            $(this).removeClass('active');
+        });
+        
+        $('[class*="testimonials"]').each(function(){
+            $(this).removeClass('active');
+        });
+        
+        $(this).addClass('active');
+        
+        var index = $(this).data('index');
+        $('[class*="testimonials"]').each(function(i){
+            if ( index == i ) {
+                $('.quotes').addClass(animationName).one(animationEnd, function() {
+                    $(this).removeClass(animationName);
+                });
+                $(this).addClass(animationName + ' active').one(animationEnd, function() {
+                    $(this).removeClass(animationName);
+                });
+            }
+        });
+
+    });
 });
 
 function animation(arg) {
@@ -112,6 +138,20 @@ function animation(arg) {
         el.removeClass('animated ' + animationType);
     }
     
+}
+
+function fixClients(){
+    $('[class*="client-name"]').each(function(i){
+        if (i == 1) {
+            $(this).addClass('active');
+        }
+    });
+    
+    $('[class*="testimonials"]').each(function(i){
+        if (i == 1) {
+            $(this).addClass('active');
+        }
+    });
 }
 
 function fixNavbar() {

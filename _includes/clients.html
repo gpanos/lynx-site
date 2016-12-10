@@ -8,25 +8,27 @@
         </div>
         <div class="row">
             <div class="testimonials add-animation">
-                <div class="open-quotes">
+                <div class="quotes open-quotes">
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
-                <div class="close-quotes">
+                <div class="quotes close-quotes">
                     <i class="fa fa-quote-right" aria-hidden="true"></i>
                 </div>
-                <p class="lead"> 
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Aenean commodo ligula eget dolor. Aenean massa. 
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                </p>
+                {% for client in site.data.clients.clients %}
+                    <p class="lead testimonials"> 
+                        {{client.text}}
+                    </p>
+                {% endfor %}
             </div>
         </div>
         <div class="row">
             <div class="client-names">
                 <ul class="nav list-inline nav-text">
-                    <li>Lorem</li>
-                    <li>Aenean</li>
-                    <li>Cum</li>
+                    {% for client in site.data.clients.clients %}
+                        <li class="client-name"
+                            data-index="{{ forloop.index }}"
+                        >{{client.name}}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
