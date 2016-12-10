@@ -66,7 +66,6 @@ $( document ).ready(function() {
         speed :	0.25
     });
     
-    
     $('[class*="add-animation"]').each(function(){
         
          offset_diff = 30;
@@ -74,13 +73,27 @@ $( document ).ready(function() {
         if ($(this).hasClass('title')){
             offset_diff = 110;
         }
-    
+
         var waypoints = $(this).waypoint(function(direction) {
-            if (direction == 'down'){
-                $(this.element).addClass('animated fadeInUp');    
-            } else {
-                $(this.element).removeClass('animated fadeInUp');
+            var animationOrder = $(this.element).data('order');
+            switch (animationOrder) {
+                case 'first':
+                    setTimeout(animation, 200, [$(this.element), direction]);
+                    break;
+                case 'second':
+                    setTimeout(animation, 400, [$(this.element), direction]);
+                    break;
+                case 'third':
+                    setTimeout(animation, 600, [$(this.element), direction]);
+                    break;
+                case 'fourth':
+                    setTimeout(animation, 800, [$(this.element), direction]);
+                    break;    
+                default:
+                    setTimeout(animation, 0, [$(this.element), direction]);
+                    
             }
+            
          }, {
            offset: window_height - offset_diff
     });
@@ -88,6 +101,18 @@ $( document ).ready(function() {
     
     
 });
+
+function animation(arg) {
+    var el            = arg[0];
+    var direction     = arg[1];
+    var animationType = 'fadeIn';
+    if (direction == 'down') {
+        el.addClass('animated ' + animationType);
+    } else {
+        el.removeClass('animated ' + animationType);
+    }
+    
+}
 
 function fixNavbar() {
     if ( $(window).scrollTop() > window_height - 200 ) {
