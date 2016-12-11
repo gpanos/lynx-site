@@ -5,24 +5,30 @@
         text-transform: uppercase;
     }
     
-    .text-container {
+    .client-names {
+        margin-top: 40px;
         text-align: center;
-        opacity: 0;
-    }    
-    
-    .testimonials {
-        position: relative;
-        min-height: 200px;
-        min-width: 200px;
-        max-width: 80%;
-        margin: auto;
+        width: 100%;
+        
+        @include media-breakpoint-up(xs) { display: none; } // Small
+        @include media-breakpoint-up(sm) {display: block; } // Medium
+        @include media-breakpoint-up(md) { display: block; } // Large
     }
     
-    .open-quotes {
+    .client-name {
+        opacity: 0;
         font-size: 20px;
-        position: absolute;
-        top: 20px;
-        left: 20px;
+        margin-left : 1em;
+        margin-right : 1em;
+        text-transform: uppercase;
+    }
+    
+    .client-name.active {
+        border-bottom: solid 2px black;
+    }
+    
+    .client-name:hover {
+        cursor: pointer;
     }
     
     .close-quotes {
@@ -38,16 +44,58 @@
         padding: 50px;    
     }
     
-    .client-names {
-        display: inline-block;   
+    .lead.active {
+        display: block;
+    }
+    
+    .mobile-selectors {
+        margin-top: 40px;
+        text-align: center;
+        width: 100%;
+         display: none;
+        
+        span {
+            display: inline-block;
+
+            height: 20px;
+            width: 20px;
+            margin-left : 1em;
+            margin-right : 1em;
+            border: solid 2px grey;
+            border-radius: 50%;
+        }
+        
+        span.active {
+            border: solid 2px black;
+        }
+        
+        @include media-breakpoint-up(xs) { display: block; } // Small
+        @include media-breakpoint-up(sm) {display: none; } // Medium
+        @include media-breakpoint-up(md) { display: none; } // Large
     }
     
     .nav-text {
         margin: 0 auto;
         text-align: center;
+    }    
+    
+    .open-quotes {
+        font-size: 20px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
     
-    .active {
-        display: block;
-    }
+    .text-container {
+        text-align: center;
+        opacity: 0;
+    }    
+    
+    .testimonials {
+        position: relative;
+        min-height: 200px;
+        min-width: 200px;
+        max-width: 80%;
+        margin: auto;
+    }    
 }

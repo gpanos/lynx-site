@@ -100,10 +100,10 @@ $( document ).ready(function() {
        });
     });
     
-    $('.client-name').on('click', function(){
+    $('.client-selector').on('click', function(){
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         var animationName = 'animated zoomIn';
-        $('[class*="client-name"]').each(function(){
+        $('[class*="client-selector"]').each(function(){
             $(this).removeClass('active');
         });
         
@@ -141,8 +141,14 @@ function animation(arg) {
 }
 
 function fixClients(){
-    $('[class*="client-name"]').each(function(i){
-        if (i == 1) {
+    $('li.client-selector').each(function(i){
+        if (i == 0) {
+            $(this).addClass('active');
+        }
+    });
+    
+    $('span.client-selector').each(function(i){
+        if (i == 0) {
             $(this).addClass('active');
         }
     });
