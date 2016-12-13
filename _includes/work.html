@@ -10,10 +10,16 @@
             <div class="cards-container">
                 <div class="col-md-12">
                     {% for project in site.data.work.projects %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 work-container">
                         <div class="card card-block text-xs-center add-animation"
                              data-order="{{project.order}}"
-                        >
+                        >    
+                            <div class="show-gallery-overlay">
+                                <div class="plus-icon-wrapper">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </div>
+                                <h5>Show Gallery</h5>
+                            </div>
                             <h4 class="card-title">{{project.name}}</h4>
                             <p class="card-text">
                                 {{project.text}}

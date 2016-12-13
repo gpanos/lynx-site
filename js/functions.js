@@ -133,6 +133,16 @@ $( document ).ready(function() {
     $('#contactButton').on('mouseenter mouseleave', function(event){
         $('.fa-paper-plane').toggleClass('animated slideInRight');
     });
+    
+    $('.work-container').on('mouseenter mouseleave', function(event){
+        $(this).find('.show-gallery-overlay').removeClass('animated flipOutX');
+        if (event.type == 'mouseenter'){
+            $(this).find('.show-gallery-overlay').addClass('animated flipInX');
+        } else {
+            $(this).find('.show-gallery-overlay').addClass('animated flipOutX');
+        }
+        
+    });
 });
 
 function animation(arg) {
