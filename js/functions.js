@@ -129,6 +129,10 @@ $( document ).ready(function() {
         });
 
     });
+    
+    $('#contactButton').on('mouseenter mouseleave', function(event){
+        $('.fa-paper-plane').toggleClass('animated slideInRight');
+    });
 });
 
 function animation(arg) {
