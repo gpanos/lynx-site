@@ -83,7 +83,7 @@
         padding: 50px;
         width: 50%;
         float: left;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.8);
     }
     
     .slider {
@@ -97,6 +97,11 @@
         font-size: 30px;
         color: #fff;
         width: 100px;
+    }
+    
+    .go-back:hover {
+        cursor: pointer;
+        opacity: 0.5;
     }
     
     .project-title {
@@ -113,7 +118,24 @@
     .thumbs-container {
         margin: 80px;
     }
-
+    
+    .thumb {
+        margin-top: 20px;
+        
+        img {
+            -moz-box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+            -webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+            box-shadow:5px 5px 5px rgba(0,0,0,0.3);    
+            opacity: 1;
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        
+    }
+    
+    .thumb img:hover {
+	    opacity: 0.5;
+    }
 }
 
 .loader {

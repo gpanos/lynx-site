@@ -9,6 +9,11 @@ $( document ).ready(function() {
     fixClients();
     initMap();
     
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+    
     $(window).scroll(function(){
         fixNavbar();
     });
