@@ -143,8 +143,23 @@ $( document ).ready(function() {
         }
         
     });
+    
+    $('.work-container').on('click', function(){
+        
+        $('.work-wrapper').css('left', '-100%');
+        $('.gallery').show();
+        
+        workLoad($(this));
+        
+    });
+    
+    $('.go-back').on('click',function(){
+        $('.work-wrapper').css('left', '0%');
+        $('.gallery').hide(800);
+    });
 });
 
+    
 function animation(arg) {
     var el            = arg[0];
     var direction     = arg[1];
@@ -189,6 +204,17 @@ function fixNavbar() {
             $('nav[role="navigation"]').addClass('navbar-transparent');
         }
     }
+}
+
+function workLoad($target){
+    $.ajaxSetup ({ cache: false });
+    var spinner  = '<div class="loader">Loading...</div>',
+        newFile  = $target.data('file'),
+        newHtml  = '/work/'+ newFile +'.html',
+        newTitle =  $target.find('.card-title').text();
+            
+        $( '.project-load' ).html(spinner).load(newHtml);
+        $( '.project-title' ).text(newTitle);
 }
 
 function initMap(){
