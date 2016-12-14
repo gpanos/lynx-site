@@ -17,8 +17,9 @@ title: Lynx Pictures
 email: contact@lynx-pictures.net
 description: Production House in Paris
 meta: Lynx Pictrures Production Fiction Documantary Corporate Film Paris
+about-text: Lynx Pictrures Production Fiction Documantary Corporate Film Paris (Film, Production, Fiction, Documantary, Corporate)
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.lynx-pictures.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  gpanos
 
 # Build settings
