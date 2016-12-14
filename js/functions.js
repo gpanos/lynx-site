@@ -9,6 +9,8 @@ $( document ).ready(function() {
     fixClients();
     initMap();
     
+    $("#siteName").fitText(1, { minFontSize: '35px', maxFontSize: '100px' });
+    
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         $(this).ekkoLightbox();
@@ -34,8 +36,6 @@ $( document ).ready(function() {
             $('html, body').animate({scrollTop: $(this.hash).offset().top - navbar_height}, 900);
         }
     } );
-    
-    $("#siteName").fitText(1, { minFontSize: '35px', maxFontSize: '100px' });
     
     $('#navbarSideButton').on('click', function() {
         $('#navbarSide').addClass('reveal');
@@ -282,6 +282,7 @@ function initMap(){
       resizer();
 
       // Call on resize. Opera debounces their resize by default.
+      $(window).on('load.fittext orientationchange.fittext', resizer);
       $(window).on('resize.fittext orientationchange.fittext', resizer);
 
     });

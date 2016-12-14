@@ -5,6 +5,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $headers-color;
+        
+        @include media-breakpoint-up(xs) { font-size: 40px; } // Small
+        @include media-breakpoint-up(sm) { font-size: 3.5rem;} // Medium
+        @include media-breakpoint-up(md) { font-size: 3.5rem; } // Large
     }
     .card {
         opacity: 0;
