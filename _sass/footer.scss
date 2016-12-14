@@ -60,6 +60,10 @@
     text-decoration: none;
 }
 
+.contact-info > a:focus {
+    text-decoration: none;
+}
+
 .copyrights {
     white-space: nowrap;
     position: absolute;
