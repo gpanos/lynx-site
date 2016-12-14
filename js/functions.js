@@ -18,6 +18,14 @@ $( document ).ready(function() {
         fixNavbar();
     });
     
+    if ( $(window).width() > 767 ) {
+        initAnimations();
+    } else {
+            $('[class*="add-animation"]').each(function(){
+                $(this).css('opacity', 1);
+            });
+    }
+    
     $( 'a[href^="#"]' ).on('click', function(e) {
         e.preventDefault();
         if ($(this).attr('id') == 'brand') {
@@ -78,40 +86,7 @@ $( document ).ready(function() {
     $('.image-container').parallax({
         speed :	0.25
     });
-    
-    $('[class*="add-animation"]').each(function(){
         
-         offset_diff = 30;
-        
-        if ($(this).hasClass('title')){
-            offset_diff = 110;
-        }
-
-        var waypoints = $(this).waypoint(function(direction) {
-            var animationOrder = $(this.element).data('order');
-            switch (animationOrder) {
-                case 'first':
-                    setTimeout(animation, 200, [$(this.element), direction]);
-                    break;
-                case 'second':
-                    setTimeout(animation, 400, [$(this.element), direction]);
-                    break;
-                case 'third':
-                    setTimeout(animation, 600, [$(this.element), direction]);
-                    break;
-                case 'fourth':
-                    setTimeout(animation, 800, [$(this.element), direction]);
-                    break;    
-                default:
-                    setTimeout(animation, 0, [$(this.element), direction]);
-                    
-            }
-            
-         }, {
-           offset: window_height - offset_diff
-       });
-    });
-    
     $('.client-selector').on('click', function(){
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         var animationName = 'animated zoomIn';
@@ -179,6 +154,41 @@ function animation(arg) {
         el.removeClass('animated ' + animationType);
     }
     
+}
+
+function initAnimations() {
+    $('[class*="add-animation"]').each(function(){
+        
+         offset_diff = 30;
+        
+        if ($(this).hasClass('title')){
+            offset_diff = 110;
+        }
+
+        var waypoints = $(this).waypoint(function(direction) {
+            var animationOrder = $(this.element).data('order');
+            switch (animationOrder) {
+                case 'first':
+                    setTimeout(animation, 200, [$(this.element), direction]);
+                    break;
+                case 'second':
+                    setTimeout(animation, 400, [$(this.element), direction]);
+                    break;
+                case 'third':
+                    setTimeout(animation, 600, [$(this.element), direction]);
+                    break;
+                case 'fourth':
+                    setTimeout(animation, 800, [$(this.element), direction]);
+                    break;    
+                default:
+                    setTimeout(animation, 0, [$(this.element), direction]);
+                    
+            }
+            
+         }, {
+           offset: window_height - offset_diff
+       });
+    });
 }
 
 function fixClients(){
