@@ -20,7 +20,11 @@ $( document ).ready(function() {
     
     $( 'a[href^="#"]' ).on('click', function(e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: $(this.hash).offset().top - navbar_height}, 900);
+        if ($(this).attr('id') == 'brand') {
+            $('html, body').animate({scrollTop: 0}, 900);
+        } else {
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - navbar_height}, 900);
+        }
     } );
     
     $("#siteName").fitText(1, { minFontSize: '35px', maxFontSize: '100px' });

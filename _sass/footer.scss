@@ -3,7 +3,7 @@
 }
 
 .footer-dark {
-    background-color: rgba(30, 30, 30, 0.97);
+    background-color: $footer-color;
     color: #DDDDDD;
 }
 
@@ -23,14 +23,20 @@
     display: inline-block;
     width: 40px;
     color: #9A9A9A;
+    opacity: 0.6;
+}
 
+.social-media > a:hover {
+    opacity: 1;
 }
 
 .contact-info > a {
     color: #9A9A9A;
     display: block;
+    opacity: 0.6;
 }
 
 .contact-info > a:hover {
+    opacity: 1;
     text-decoration: none;
 }

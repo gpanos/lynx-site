@@ -15,19 +15,49 @@
             </div>
         </div>
         <div class="row">
-            <div class="images-container">
-                <div class="col-md-12">
-                    {% for aboutPhoto in site.data.about.aboutPhotos %}
-                        <div class="col-md-4">
-                            <div class="card add-animation"
-                                 data-order="{{aboutPhoto.order}}"
-                            >
-                                <img src="/assets/img/{{aboutPhoto.name}}" alt="Card Image">
-                            </div>                
-                        </div>
-                    {% endfor %}
-                </div>        
-            </div>
+            <div class="col-md-12 images-container">
+                <div class="col-md-4 group-image">
+                    <div class="card add-animation"
+                         data-order="first"
+                    >
+                        <img src="/assets/img/group1.jpg" alt="Card Image">
+                    </div>            
+                    <div class="card add-animation"
+                         data-order="second"
+                    >
+                        <img src="/assets/img/group2.jpg" alt="Card Image">
+                    </div>                
+                </div>
+                <div class="col-md-4 group-image">
+                    <div class="card add-animation"
+                         data-order="first"
+                    >
+                        <img src="/assets/img/group3.jpg" alt="Card Image">
+                    </div>            
+                    <div class="card add-animation"
+                         data-order="second"
+                    >
+                        <img src="/assets/img/group4.jpg" alt="Card Image">
+                    </div>                
+                    <div class="card add-animation"
+                         data-order="third"
+                    >
+                        <img src="/assets/img/group5.jpg" alt="Card Image">
+                    </div>                
+                </div>
+                <div class="col-md-4 group-image">
+                    <div class="card add-animation"
+                         data-order="first"
+                    >
+                        <img src="/assets/img/group2.jpg" alt="Card Image">
+                    </div>            
+                    <div class="card add-animation"
+                         data-order="second"
+                    >
+                        <img src="/assets/img/group1.jpg" alt="Card Image">
+                    </div>                
+                </div>
+            </div>        
         </div>
     </div>
     

@@ -81,6 +81,12 @@
     font-weight: 600;
 }
 
+.navbar-side-item > a:hover {
+    color: $light-orange;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
 .social-links {
     text-align: center;
     margin-left: -40px;  
@@ -93,6 +99,11 @@
     width: 40px;
     color: #444444;
 
+}
+
+.social-links > a:hover {
+    color: $light-orange;
+    opacity: 0.6;   
 }
 
 .header-text {

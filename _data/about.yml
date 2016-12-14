@@ -10,3 +10,9 @@ aboutPhotos:
   
 - name: group3.jpg
   order: third
+ 
+- name: group4.jpg
+  order: first
+  
+- name: group5.jpg
+  order: second  
