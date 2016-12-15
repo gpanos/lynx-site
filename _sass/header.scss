@@ -186,6 +186,10 @@
     background-position: center center;
     background-attachment: fixed;
     
+    @include media-breakpoint-up(xs) { background-attachment: initial} // Small
+    @include media-breakpoint-up(sm) { background-attachment: fixed } // Medium
+    @include media-breakpoint-up(md) { background-attachment: fixed } // Large
+
 }
 
 .reveal {
