@@ -180,8 +180,12 @@
 
 
 .image-container {
-    background: url('../assets/img/header.jpg') no-repeat center center fixed;
+    background-image: url('../assets/img/header.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
 }
 
 .reveal {
