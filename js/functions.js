@@ -83,11 +83,11 @@ $( document ).ready(function() {
     });
     
     $('.work-container').on('mouseenter mouseleave', function(event){
-        $(this).find('.show-gallery-overlay').removeClass('animated flipOutX');
+        $(this).find('.show-gallery-overlay').removeClass('animated fadeOut');
         if (event.type == 'mouseenter'){
-            $(this).find('.show-gallery-overlay').addClass('animated flipInX');
+            $(this).find('.show-gallery-overlay').addClass('animated fadeIn');
         } else {
-            $(this).find('.show-gallery-overlay').addClass('animated flipOutX');
+            $(this).find('.show-gallery-overlay').addClass('animated fadeOut');
         }
         
     });
