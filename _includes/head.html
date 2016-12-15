@@ -16,13 +16,20 @@
     <meta property="og:site_name" content="{{site.title}}" />
     <meta property="fb:admins" content="1062701416" />
         
-    <link href="/assets/img/lynxicon.ico" rel="icon" type="image/x-icon" />
+    <link href="{{ "/assets/img/lynxicon.ico" | prepend: site.baseurl }}" rel="icon" type="image/x-icon" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/assets/animate.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/lightbox/ekko-lightbox.min.css" | prepend: site.baseurl }}">
+
+<!--    
     <link rel="stylesheet" href="/assets/animate.css">
     <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/lightbox/ekko-lightbox.min.css">
+-->
+
 </head>

@@ -10,13 +10,22 @@
         {% include footer.html %}
 
         <!-- JavaScript -->
-        <script src="/assets/jquery-3.1.1.min.js"></script>
+        <script src="{{ "/assets/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/tether.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/bootstrap.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/jquery.waypoints.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/lightbox/ekko-lightbox.min.js" | prepend: site.baseurl }}"></script>
+        <script src="//maps.google.com/maps/api/js"></script>
+        <script src="{{ "/js/functions.js" | prepend: site.baseurl }}"></script>
+        
+        
+        <!--
         <script src="/assets/tether.min.js"></script>
         <script src="/assets/bootstrap.js"></script>
         <script src="/assets/jquery.waypoints.min.js"></script>
         <script src="/assets/lightbox/ekko-lightbox.min.js"></script>        
         <script src="//maps.google.com/maps/api/js"></script>
         <script src="/js/functions.js"></script>
-        
+        -->
     </body>
 </html>
