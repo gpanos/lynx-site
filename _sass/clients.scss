@@ -41,9 +41,9 @@
     }
     
     .close-quotes {
-        font-size: 20px;
+        font-size: 40px;
         position: absolute;
-        color: $main-text-color;
+        color: rgba(140, 140, 140, 0.4);
         bottom: 20px;
         right: 20px;
     }
@@ -91,8 +91,8 @@
     }    
     
     .open-quotes {
-        font-size: 20px;
-        color: $main-text-color;
+        font-size: 40px;
+        color: rgba(140, 140, 140, 0.4);
         position: absolute;
         top: 20px;
         left: 20px;
