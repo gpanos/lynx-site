@@ -66,9 +66,14 @@
 
 .copyrights {
     white-space: nowrap;
+    display: inline-block;
     position: absolute;
     left: 50%;
     bottom: 8px;
     transform: translateX(-50%);
     opacity: 0.8;
+}
+
+#xpa {
+    display: inline-block;
 }
