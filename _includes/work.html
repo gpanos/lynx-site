@@ -15,7 +15,7 @@
                         <div class="col-md-4 work-container"
                              data-file="{{project.file}}"
                         >
-                            <div class="card card-block text-xs-center add-animation"
+                            <div class="card text-xs-center add-animation"
                                  data-order="{{project.order}}"
                             >    
                                 <div class="show-gallery-overlay">
@@ -24,10 +24,14 @@
                                     </div>
                                     <h5>Show Gallery</h5>
                                 </div>
-                                <h4 class="card-title">{{project.name}}</h4>
-                                <p class="card-text">
-                                    {{project.text}}
-                                </p>                                
+                                <img class="card-img-top" src="{{site.baseurl}}/assets/img/{{project.image}}" alt="Project image">
+                                <div class="card-block">
+                                    <h2 class="card-title">{{project.name}}</h2>
+                                    <p class="card-text">
+                                        {{project.text}}
+                                    </p>                                                                    
+                                </div>
+
                             </div>                
                         </div>
                         {% endfor %}
